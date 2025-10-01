@@ -1,0 +1,31 @@
+1. make python env for python 3.10
+best use conda (i prefer conda, easy to use)
+
+2. dependencies
+if you have cuda replace the faiss-cpu to faiss-gpu:
+
+faiss-gpu>=1.8
+
+install deps:
+pip install -r requirements.txt
+
+also for cuda:
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+replace 121 with version that is supported on your hardware (ie. my 5090 is 128)
+
+3. usage:
+
+in build-gallery-index.py change the path (must be absolute) or just get it from command line
+
+to build index:
+
+python build-gallery-index.py
+
+it will create db file (it's sqlite3) and index file for faiss
+
+to search:
+python search-photo.py "what you looking for"
+
+this uses CLIP so you can use natural language like "yellow banana" (there is in one of photos)
+
