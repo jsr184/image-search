@@ -1,0 +1,20 @@
+# Core deep learning
+torch>=2.0
+torchvision>=0.15
+
+# Progress / utilities
+tqdm>=4.66
+numpy>=1.24
+pillow>=10.0
+
+# Image and OCR
+opencv-python>=4.9
+easyocr>=1.7
+
+# Embeddings & search
+open-clip-torch>=2.24
+faiss-cpu>=1.8
+# (use faiss-gpu instead if you want GPU-accelerated search)
+
+# Database helpers
+sqlite-utils>=3.36
